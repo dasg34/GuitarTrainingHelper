@@ -1,15 +1,11 @@
 #include "gh_main.h"
+#include "gh_view.h"
 
+#include <Gh.h>
 #include <device/power.h>
 
 Eext_Circle_Surface* _circle_surface;
 Evas_Object *_naviframe;
-
-static void
-win_delete_request_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	ui_app_exit();
-}
 
 static void
 create_base_gui()
@@ -19,13 +15,13 @@ create_base_gui()
 
 	win = elm_win_util_standard_add(PACKAGE, PACKAGE);
 	elm_win_autodel_set(win, EINA_TRUE);
-	evas_object_smart_callback_add(win, "delete,request", win_delete_request_cb, NULL);
 
 	naviframe = elm_naviframe_add(win);
 	_naviframe = naviframe;
 	circle_surface = eext_circle_surface_naviframe_add(naviframe);
 	_circle_surface = circle_surface;
 	elm_win_resize_object_add(win, naviframe);
+	gh_main_layout_create(naviframe);
 	evas_object_show(naviframe);
 
 	evas_object_show(win);

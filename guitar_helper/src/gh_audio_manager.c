@@ -5,8 +5,9 @@
  *      Author: lee
  */
 #include "gh_main.h"
-#include "gh_libfft.h"
 #include "gh_audio_manager.h"
+
+#include <Gh.h>
 
 #include <audio_io.h>
 

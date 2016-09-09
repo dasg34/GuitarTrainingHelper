@@ -6,8 +6,8 @@
         <icon>guitar_helper.png</icon>
     </ui-application>
     <privileges>
-        <privilege>http://tizen.org/privilege/recorder</privilege>
         <privilege>http://tizen.org/privilege/display</privilege>
+        <privilege>http://tizen.org/privilege/recorder</privilege>
     </privileges>
     <feature name="http://tizen.org/feature/microphone">true</feature>
 </manifest>

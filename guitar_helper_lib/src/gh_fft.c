@@ -14,10 +14,8 @@
 
 #ifndef __LIBFFT_C_
 
-#include "gh_libfft.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+#include "gh_fft.h"
+#include "Gh.h"
 
 #define MAXFFTSIZE 32768
 #define LOG2_MAXFFTSIZE 15

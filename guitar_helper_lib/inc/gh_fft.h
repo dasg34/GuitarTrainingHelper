@@ -11,6 +11,22 @@
 */
 
 
-void *initfft(int bits);
-void destroyfft( void *fft );
-void applyfft( void * fft, float *xr, float *xi, int inv );
+#ifndef _GH_FFT_H_
+#define _GH_FFT_H_
+
+#include <tizen.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+EXPORT_API void *initfft(int bits);
+
+EXPORT_API void destroyfft( void *fft );
+
+EXPORT_API void applyfft( void * fft, float *xr, float *xi, int inv );
+
+#ifdef __cplusplus
+}
+#endif
+#endif // _GH_FFT_H_

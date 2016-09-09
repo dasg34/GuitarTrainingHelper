@@ -1,5 +1,5 @@
-#ifndef __voicetest_H__
-#define __voicetest_H__
+#ifndef __GH_MAIN_H__
+#define __GH_MAIN_H__
 
 #include <app.h>
 #include <Elementary.h>
@@ -10,14 +10,10 @@
 #ifdef  LOG_TAG
 #undef  LOG_TAG
 #endif
-#define LOG_TAG "voicetest"
+#define LOG_TAG "guitar_helper"
 
 #if !defined(PACKAGE)
-#define PACKAGE "org.example.voicetest"
+#define PACKAGE "org.guitar.helper"
 #endif
 
-#define EDJ_FILE "edje/voicetest.edj"
-#define GRP_MAIN "main"
-
-
-#endif /* __voicetest_H__ */
+#endif /* __GH_MAIN_H__ */
