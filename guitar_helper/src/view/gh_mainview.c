@@ -11,7 +11,7 @@
 #include <Gh.h>
 
 static Eina_Bool
-naviframe_pop_main_cb(void *data, Elm_Object_Item *it)
+_main_layout_back_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	ui_app_exit();
 	return EINA_FALSE;
@@ -21,9 +21,8 @@ void
 gh_main_layout_create(Evas_Object* naviframe)
 {
 	Evas_Object *layout;
-	Elm_Object_Item *navi_item;
 	layout = gh_layout_add(naviframe,"edje/gh_main.edj","main");
 
-	navi_item =elm_naviframe_item_simple_push(naviframe,layout);
-	elm_naviframe_item_pop_cb_set(navi_item, naviframe_pop_main_cb, NULL);
+	elm_naviframe_item_simple_push(naviframe,layout);
+	eext_object_event_callback_add(layout, EEXT_CALLBACK_BACK, _main_layout_back_cb, NULL);
 }
