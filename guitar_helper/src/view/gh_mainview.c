@@ -10,11 +10,10 @@
 
 #include <Gh.h>
 
-static Eina_Bool
-_main_layout_back_cb(void *data, Evas_Object *obj, void *event_info)
+static void
+_main_layout_back_cb(void *data EINA_UNUSED, Evas_Object *obj EINA_UNUSED, void *event_info EINA_UNUSED)
 {
 	ui_app_exit();
-	return EINA_FALSE;
 }
 
 void

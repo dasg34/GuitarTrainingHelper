@@ -28,7 +28,7 @@ create_base_gui()
 }
 
 static bool
-app_create(void *data)
+app_create(void *data EINA_UNUSED)
 {
 	create_base_gui();
 
@@ -36,13 +36,13 @@ app_create(void *data)
 }
 
 static void
-app_control(app_control_h app_control, void *data)
+app_control(app_control_h app_control EINA_UNUSED, void *data EINA_UNUSED)
 {
 	/* Handle the launch request. */
 }
 
 static void
-app_pause(void *data)
+app_pause(void *data EINA_UNUSED)
 {
 	/* Take necessary actions when application becomes invisible. */
 	dlog_print(DLOG_ERROR, LOG_TAG, "app_pause");
@@ -50,13 +50,13 @@ app_pause(void *data)
 }
 
 static void
-app_resume(void *data)
+app_resume(void *data EINA_UNUSED)
 {
 	/* Take necessary actions when application becomes visible. */
 }
 
 static void
-app_terminate(void *data)
+app_terminate(void *data EINA_UNUSED)
 {
 	/* Release all resources. */
 	dlog_print(DLOG_ERROR, LOG_TAG, "app_terminate");
