@@ -1,0 +1,73 @@
+collections {
+   group { name: "elm/genlist/item/3icon/default";
+      alias: "elm/genlist/item_compress/3icon/default";
+      data.item: "contents" "elm.icon elm.icon.2 elm.icon.3";
+      parts {
+         part { name: "bg";
+            scale: 1;
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "elm.icon";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.16 0.5;
+               rel2.relative: 0.16 0.5;
+               align: 0.5 0.5;
+               min: 0 2;
+            }
+         }
+         part { name: "elm.icon.2";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.40 0.5;
+               rel2.relative: 0.40 0.5;
+               align: 0.5 0.5;
+               min: 0 2;
+            }
+         }
+         part { name: "elm.icon.3";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.64 0.5;
+               rel2.relative: 0.64 0.5;
+               align: 0.5 0.5;
+               min: 0 2;
+            }
+         }
+      }
+   }
+   group { name: "elm/genlist/item/2icon/default";
+      alias: "elm/genlist/item_compress/2icon/default";
+      data.item: "contents" "elm.icon elm.icon.2";
+      parts {
+         part { name: "bg";
+            scale: 1;
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "elm.icon";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.24 0.5;
+               rel2.relative: 0.24 0.5;
+               align: 0.5 0.5;
+               min: 0 2;
+            }
+         }
+         part { name: "elm.icon.2";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1.relative: 0.64 0.5;
+               rel2.relative: 0.64 0.5;
+               align: 0.5 0.5;
+               min: 0 2;
+            }
+         }
+      }
+   }
+}

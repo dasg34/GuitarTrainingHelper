@@ -110,5 +110,16 @@ collections {
             }
          }
       }
+      programs {
+         program{
+            name:"chord_menu_clicked";
+            signal: "mouse,clicked,*";
+            source: "chord_menu";
+            
+            script{
+               emit("chord_menu_clicked","");
+            }
+         }
+      }
    }
 }

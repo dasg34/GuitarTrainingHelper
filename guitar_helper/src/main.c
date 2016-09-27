@@ -1,8 +1,6 @@
-#include "gh_main.h"
-#include "gh_view.h"
-
-#include <Gh.h>
 #include <device/power.h>
+#include <main.h>
+#include <view.h>
 
 Eext_Circle_Surface* _circle_surface;
 Evas_Object *_naviframe;
@@ -21,7 +19,7 @@ create_base_gui()
 	circle_surface = eext_circle_surface_naviframe_add(naviframe);
 	_circle_surface = circle_surface;
 	elm_win_resize_object_add(win, naviframe);
-	gh_main_layout_create(naviframe);
+	main_menu_create(naviframe);
 	evas_object_show(naviframe);
 
 	evas_object_show(win);

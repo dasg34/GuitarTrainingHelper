@@ -5,6 +5,7 @@
 #include <Elementary.h>
 #include <system_settings.h>
 #include <efl_extension.h>
+#include <Gh.h>
 #include <dlog.h>
 
 #ifdef  LOG_TAG

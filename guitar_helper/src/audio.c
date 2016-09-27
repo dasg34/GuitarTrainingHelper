@@ -1,15 +1,7 @@
-/*
- * gh_audio_manager.c
- *
- *  Created on: Aug 16, 2016
- *      Author: lee
- */
-#include "gh_main.h"
-#include "gh_audio_manager.h"
-
-#include <Gh.h>
-
 #include <audio_io.h>
+
+#include <audio.h>
+#include <main.h>
 
 #define BUF_SIZE 8192
 #define SAMPLE_RATE (8000)

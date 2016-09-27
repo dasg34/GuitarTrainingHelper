@@ -1,0 +1,181 @@
+collections {
+   base_scale: 1.0;
+   group { name: "main";
+      images {
+         image: "circle_white.png" COMP;
+      }
+      parts {
+         part { name: "bg";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 255;
+               min: 360 360;
+            }
+         }
+         part { name: "title";
+            type: TEXT;
+            description { state: "default" 0.0;
+               rel1.relative: 0.5 0.15;
+               rel2.relative: 0.5 0.15;
+               text {
+                  text: "X chord";
+                  size: 26;
+               }
+               min: 360 60;
+               color: 255 183 0 255;
+            }
+         }
+         part { name: "icon.1";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               rel1.relative: 0.2 0.42;
+               rel2.relative: 0.2 0.42;
+               image.normal: "circle_white.png";
+               min: 100 100;
+            }
+         }
+         part { name: "text.1";
+            type: TEXT;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 0 0;
+                  to: "icon.1";
+               }
+               rel2 {
+                  relative: 1 1;
+                  to: "icon.1";
+               }
+               text {
+                  text: "X";
+                  size: 28;
+               }
+               color: 0 0 0 255;
+            }
+         }
+         part { name: "icon.2";
+            type: PROXY;
+            description { state: "defualt" 0.0;
+               rel1.relative: 0.5 0.42;
+               rel2.relative: 0.5 0.42;
+               min: 100 100;
+               source: "icon.1";
+            }
+         }
+         part { name: "text.2";
+            type: TEXT;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 0 0;
+                  to: "icon.2";
+               }
+               rel2 {
+                  relative: 1 1;
+                  to: "icon.2";
+               }
+               text {
+                  text: "Xm";
+                  size: 28;
+               }
+               color: 0 0 0 255;
+            }
+         }
+         part { name: "icon.3";
+            type: PROXY;
+            description { state: "defualt" 0.0;
+               rel1.relative: 0.8 0.42;
+               rel2.relative: 0.8 0.42;
+               min: 100 100;
+               source: "icon.1";
+            }
+         }
+         part { name: "text.3";
+            type: TEXT;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 0 0;
+                  to: "icon.3";
+               }
+               rel2 {
+                  relative: 1 1;
+                  to: "icon.3";
+               }
+               text {
+                  text: "X7";
+                  size: 28;
+               }
+               color: 0 0 0 255;
+            }
+         }
+         part { name: "icon.4";
+            type: PROXY;
+            description { state: "defualt" 0.0;
+               rel1.relative: 0.35 0.75;
+               rel2.relative: 0.35 0.75;
+               min: 100 100;
+               source: "icon.1";
+            }
+         }
+         part { name: "text.4";
+            type: TEXT;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 0 0;
+                  to: "icon.4";
+               }
+               rel2 {
+                  relative: 1 1;
+                  to: "icon.4";
+               }
+               text {
+                  text: "XM7";
+                  size: 28;
+               }
+               color: 0 0 0 255;
+            }
+         }
+         part { name: "icon.5";
+            type: PROXY;
+            description { state: "defualt" 0.0;
+               rel1.relative: 0.65 0.75;
+               rel2.relative: 0.65 0.75;
+               min: 100 100;
+               source: "icon.1";
+            }
+         }
+         part { name: "text.5";
+            type: TEXT;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 0 0;
+                  to: "icon.5";
+               }
+               rel2 {
+                  relative: 1 1;
+                  to: "icon.5";
+               }
+               text {
+                  text: "Xm7";
+                  size: 28;
+               }
+               color: 0 0 0 255;
+            }
+         }
+      }
+      /*
+      programs {
+         program { name: "mouse_down";
+            signal: "mouse,down,1";
+            source: "rect";
+            action: STATE_SET "clicked" 0.0;
+            target: "rect";
+         }
+         program { name: "mouse_up";
+            signal: "mouse,up,1";
+            source: "rect";
+            action: STATE_SET "default" 0.0;
+            target: "rect";
+         }
+      }
+      */
+   }
+}
